@@ -1,6 +1,12 @@
 name: Lint and Test
 
-on: [pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   check:
@@ -13,4 +19,3 @@ jobs:
       - run: npm install
       - run: npm run lint
       - run: npm test
-            
